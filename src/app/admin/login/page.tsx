@@ -4,7 +4,7 @@ import * as React from "react";
 import { useRouter } from "next/navigation";
 
 import { GoogleSignInButton } from "@/components/auth/google-sign-in-button";
-import { useAuth } from "@/components/auth/auth-provider";
+import { useAuth } from "@/providers";
 import {
   Card,
   CardContent,

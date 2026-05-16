@@ -4,7 +4,7 @@ import Link from "next/link";
 import * as React from "react";
 import { LogOutIcon, ShieldIcon, UserIcon } from "lucide-react";
 
-import { useAuth } from "@/components/auth/auth-provider";
+import { useAuth } from "@/providers";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";

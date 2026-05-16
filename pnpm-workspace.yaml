@@ -1,3 +1,8 @@
+# Despite the name, this isn't a multi-package workspace config.
+# pnpm 11 reads `allowBuilds` from this file to decide which dependencies
+# may run install-time build scripts (Postinstall, native bindings, etc.).
+# Keep this file even in single-package projects — `package.json#pnpm.onlyBuiltDependencies`
+# alone is no longer honored by pnpm 11.
 allowBuilds:
   '@firebase/util': true
   msw: true
