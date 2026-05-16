@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Nunito } from "next/font/google";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
@@ -16,6 +16,14 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+// Open-source stand-in for SF Pro Rounded — see DESIGN.md "Note on Font Substitutes".
+// Used only on h1–h6 via the `font-heading` Tailwind utility.
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin"],
+  weight: ["500", "600"],
 });
 
 export const metadata: Metadata = {
@@ -44,7 +52,7 @@ export default function RootLayout({
     <html
       lang={siteConfig.defaultLocale}
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${nunito.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <RootProvider>

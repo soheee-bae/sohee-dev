@@ -1,9 +1,10 @@
 /**
  * Single source of truth for brand & UX-level constants.
  *
- * Color tokens themselves live in `src/app/globals.css` (Tailwind v4 @theme).
- * Use this file for values that the app reads at runtime: brand identity,
- * default theme behavior, admin allowlist, etc.
+ * Visual tokens (colors, radii, spacing) live in `src/app/globals.css` —
+ * they follow the Ollama-inspired system documented in `DESIGN.md` at the
+ * repository root. Use this file for values that the app reads at runtime:
+ * brand identity, default theme behavior, admin allowlist, etc.
  */
 
 export const themeConfig = {
@@ -15,6 +16,7 @@ export const themeConfig = {
   fonts: {
     sans: "var(--font-geist-sans)",
     mono: "var(--font-geist-mono)",
+    heading: "var(--font-nunito)",
   },
   defaultMode: "system" as "light" | "dark" | "system",
   /**
